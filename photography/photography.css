@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: futura-pt;
+  scroll-behavior: smooth;
+}
+
+header {
+  color: black;
+  height: 6vh;
+  width: 100%;
+  padding: 0 20px;
+  background: white;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header i {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header i:hover {
+  opacity: 0.5;
+}
+
+.mobile-nav {
+  height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  padding-left: 20px;
+}
+
+.mobile-nav ul {
+  list-style: none;
+}
+
+.mobile-nav ul li {
+  font-size: 32px;
+  padding-bottom: 30px;
+  transition: 0.2s;
+}
+
+.mobile-nav ul li a {
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.mobile-nav ul li:hover {
+  color: rgba(179, 179, 179, 0.705);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#header {
+  color: white;
+}
+
+/* Parallax Effect */
+.main {
+  /* Fill the available space */
+  margin: 0 20px;
+  height: 100vh;
+
+  /* Make the children of the element closer to the viewport */
+  perspective: 2px;
+
+  /* Hide the overflow */
+  overflow-x: hidden;
+}
+
+/* General styling, not necessarily related to parallax effect  */
+.section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+/* Different background colors for demo purpose */
+.static-one {
+  background-color: #feceab;
+}
+
+.static-two {
+  background-color: #aacfcf;
+}
+
+.static-three {
+  background-color: #c06c84;
+}
+
+.parallax::after {
+  /* Position the pseudo-element to fill the parent */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Scale the image to full */
+  background-size: cover;
+
+  /* Move the element back then scale the element, it helps to appears more slowly */
+  transform: translateZ(-1px) scale(1.7);
+
+  /* Set the parallax section before the other elements. */
+  z-index: -1;
+}
+
+/* Different background images */
+.parallax-one::after {
+  background-image: url(https://source.unsplash.com/vs6a4EHj_Ro/1600x900);
+}
+
+.parallax-two::after {
+  background-image: url(https://source.unsplash.com/P86-JPbDnPY/1600x900);
+}
+/* Parallax Effect */
+
+#couples {
+  text-align: center;
+}

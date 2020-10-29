@@ -1,0 +1,449 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: futura-pt;
+  scroll-behavior: smooth;
+}
+
+#home {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 90vh;
+}
+
+#home a {
+  position: absolute;
+  font-size: 30px;
+  top: 93%;
+  color: white;
+}
+
+header {
+  color: black;
+  height: 6vh;
+  width: 100%;
+  padding: 0 20px;
+  background: white;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header i {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header i:hover {
+  opacity: 0.5;
+}
+
+/* PARALLAX STYLING */
+.main {
+  margin: 0 20px;
+  /* Fill the available space */
+  height: 100vh;
+
+  /* Make the children of the element closer to the viewport */
+  perspective: 2px;
+
+  /* Hide the overflow */
+  overflow-x: hidden;
+}
+
+/* General styling, not necessarily related to parallax effect  */
+.section {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 80vh;
+}
+
+/* Different background colors for demo purpose */
+.static-one {
+  background-color: white;
+}
+
+.static-two {
+  background-color: white;
+}
+
+.static-three {
+  background-color: white;
+}
+
+.parallax::after {
+  /* Position the pseudo-element to fill the parent */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Scale the image to full */
+  background-size: cover;
+
+  /* Move the element back then scale the element, it helps to appears more slowly */
+  transform: translateZ(-1px) scale(1.7);
+
+  /* Set the parallax section before the other elements. */
+  z-index: -1;
+}
+
+/* Different background images */
+.parallax-one::after {
+  background-image: url(https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-position: center;
+}
+
+.parallax-two::after {
+  background-image: url(https://images.unsplash.com/photo-1481653125770-b78c206c59d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-position: center;
+  background-size: cover;
+}
+
+.parallax-three::after {
+  background-image: url(https://images.unsplash.com/photo-1519741357542-22a23fd3627b?ixlib=rb-1.2.1&auto=format&fit=crop&w=754&q=80);
+  background-size: cover;
+  background-position: center;
+}
+/* PARALLAX STYLING */
+
+.gold {
+  color: rgb(216, 176, 0);
+}
+
+#call-to-action {
+  padding: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.about {
+  padding: 20px 0 70px 0;
+  width: 100%;
+  text-align: center;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.about .links {
+  margin: 20px;
+}
+
+.about .links i {
+  margin: 0 10px 0 10px;
+}
+
+.about h2 {
+  margin: 20px 30px 30px 30px;
+}
+
+.about p {
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+.services {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.services h2 {
+  margin: 30px;
+}
+
+.services .cards {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.services .card {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+}
+
+.services .card button {
+  opacity: 0.8;
+  display: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  border: none;
+}
+
+.services .card:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+.services .card:hover button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  z-index: 1;
+}
+
+.services .card:hover h2 {
+  transition: 1s;
+  display: none;
+}
+
+#photo {
+  background-image: url(https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=655&q=80);
+  background-size: cover;
+}
+
+#videography {
+  background-image: url(https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+  background-size: cover;
+}
+
+#beauty {
+  background-image: url(https://images.unsplash.com/photo-1481066717861-4775e000c88a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+  background-size: cover;
+}
+
+#video {
+  padding: 0px 20px 50px 20px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#video h2 {
+  margin: 30px;
+  text-align: center;
+}
+
+#video iframe {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+#video p {
+  line-height: 25px;
+}
+
+#footer {
+  padding: 40px 0 100px 0;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.instagram {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.square {
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.one {
+  background-image: url(https://images.unsplash.com/photo-1553102674-af685bb5fe40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+}
+
+.two {
+  background-image: url(https://images.unsplash.com/photo-1550005809-91ad75fb315f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);
+}
+
+.three {
+  background-image: url(https://images.unsplash.com/photo-1562859137-3a98fe2a9475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+}
+
+.four {
+  background-image: url(https://images.unsplash.com/photo-1563808599496-715100c95388?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+}
+
+.five {
+  background-image: url(https://images.unsplash.com/photo-1556302482-70b6e670e6b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+}
+
+.six {
+  background-image: url(https://images.unsplash.com/photo-1556203993-d14676cd8716?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+}
+
+.seven {
+  background-image: url(https://images.unsplash.com/photo-1563808600514-d4924bfefaab?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+}
+
+.eight {
+  background-image: url(https://images.unsplash.com/photo-1560269338-02be1dd66ffd?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-nav {
+  height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  padding-left: 20px;
+}
+
+.mobile-nav ul {
+  list-style: none;
+}
+
+.mobile-nav ul li {
+  font-size: 32px;
+  padding-bottom: 30px;
+  transition: 0.2s;
+}
+
+.mobile-nav ul li a {
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.mobile-nav ul li:hover {
+  color: rgba(179, 179, 179, 0.705);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.cta-btn {
+  opacity: 0.9;
+  background: rgb(216, 176, 0);
+  padding: 10px 20px;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+  #about {
+    padding: 80px 200px 100px 200px;
+  }
+  #video {
+    padding: 0px 200px 100px 200px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  #about {
+    padding: 80px 200px 100px 200px;
+  }
+  #video {
+    padding: 0px 400px 100px 400px;
+  }
+  #footer {
+    width: 100%;
+  }
+  .instagram {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
